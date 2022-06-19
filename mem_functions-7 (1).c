@@ -4,8 +4,6 @@ extern BLOCK_HEADER* first_header;
 // return a pointer to the payload
 // if a large enough free block isn't available, return NULL
 void* Mem_Alloc(int size){
-    // find a free block that's big enough
-    // per block data
     int id = 0;
     int alloc;
     BLOCK_HEADER *alloc_location;
@@ -84,8 +82,6 @@ void* Mem_Alloc(int size){
 // return 0 on success
 // return -1 if the input ptr was invalid
 int Mem_Free(void *ptr){
-    // traverse the list and check all pointers to find the correct block 
-    // if you reach the end of the list without finding it return -1
     int alloc;
     int block_size;
     int payload;
